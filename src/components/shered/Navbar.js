@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import NavbarItem from './NavbarItem';
 
 const Navbar = () => {
@@ -20,9 +19,6 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal p-0">
                     <NavbarItem></NavbarItem>
                 </ul>
-            </div>
-            <div className="navbar-end">
-                <a className="btn">Get started</a>
             </div>
         </div>
     );
