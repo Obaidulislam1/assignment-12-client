@@ -1,11 +1,11 @@
 import React from 'react';
+import Carusale from '../page/Carusale';
 
 const Home = () => {
     return (
         <div>
-            <h1>home page</h1>
+            <Carusale></Carusale>
         </div>
     );
 };
-
 export default Home;
