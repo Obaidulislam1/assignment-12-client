@@ -1,0 +1,146 @@
+[
+    {
+      "name": "Helio30",
+      "brand": "Symphony",
+      "category_id": "1",
+      "picture": "https://www.symphony-mobile.com/storage/products/WUMyIm0loke50O0pOHKrAAmBBnr2YtfoAY5KLVoB.png",
+      "price": "16,499",
+      "description": "AI, RAW Mode, Macro, Wide Angle, ZSD, Portrait Mode, Geo tagging, Watermark, Night Mode, Insight Google lens, Gif, Intelligent Scanning, HDR,"
+    },
+    {
+      "name": "Symphony Z55_128GB",
+      "brand": "Symphony",
+      "category_id": "1",
+      "picture": "https://www.symphony-mobile.com/storage/products/g5smJb0ITfOPANlQMTLCAWzzZgcvBOkk9frKcjID.png",
+      "price": "12,599",
+      "description": "450H [ Estimated-Depends on the Phone Setting]+ Hours.25H [ Estimated-Depends on the Phone Setting] Hours."
+    },
+    {
+      "name": "Z55",
+      "brand": "Symphony",
+      "category_id": "1",
+      "picture": "https://www.symphony-mobile.com/storage/products/al4eYmIJc1EZPMTIz1fuRBGrKQRTrbOWQzpCtX64.png",
+      "price": "11,999",
+      "description": "AI, Portrait Mode, Watermark, Night Mode, Insight Google Lens, Pro Mode, Slow-Motion, QR Code"
+    },
+    {
+      "name": "Symphony Z47",
+      "brand": "Symphony",
+      "category_id": "1",
+      "picture": "https://www.symphony-mobile.com/storage/products/vZ3X6YaRUXy0hoq7nwEcTe8KgZG1n4kfhKGNhZFO.png",
+      "price": "11,499",
+      "description": "Side-Mounted Fingerprint.Smart control.Eye comfort.Dark Theme Scheduler.Screen Recorder.Notification Light.90Hz Refresh Rate.Anti Finger Touch Panel"
+    },
+    {
+      "name": "Symphony ATOM 3",
+      "brand": "Symphony",
+      "category_id": "1",
+      "picture": "https://www.symphony-mobile.com/storage/products/IeFfZMjt2sXG7ii8uAG3sisIizkJTNV5JdxgLqXr.png",
+      "price": "9,999 ",
+      "description": "420 [ Estimated-Depends on the Phone Setting]+ Hours.24 [Estimated-Depends on Network & Phone Setting} Hours"
+    },
+    {
+      "name": "Symphony i85",
+      "brand": "Symphony",
+      "category_id": "1",
+      "picture": "https://www.symphony-mobile.com/storage/products/TS05cYVFGvoSEAmJlf41TcAmKADpM6tuSt9vNEyR.png",
+      "price": "8,299",
+      "description": "353H [ Estimated-Depends on the Phone Setting]+ Hours.9H [ Estimated-Depends on Network & Phone Setting] Hours"
+    },
+    {
+      "name": "orbit y50",
+      "brand": "walton",
+      "category_id": "2",
+      "picture": "https://waltonbd.com/image/cache/catalog/mobile/smart-phone/orbit-y50/orbit-y50-id-03-364x364.jpg",
+      "price": "12,999",
+      "description": "4GB RAM of Y50 can manage light daily tasks without any difficulty. And has 64GB of space for storing all your preferred apps, music, videos,"
+    },
+    {
+      "name": "primo zx4",
+      "brand": "walton",
+      "category_id": "2",
+      "picture": "https://waltonbd.com/image/cache/catalog/Mobile/2021/ZX4/ID%20Image/ZX4_ID-364x364.jpg",
+      "price": "26,999",
+      "description": "HyperEngine technology.RAM: 8GB; ROM: 128GB.16.9cm (6.67”) Dot-in, FHD+ LTPS Display.64MP Penta Camera Setup.32MP Selfie camera"
+    },
+    {
+      "name": "primo s8",
+      "brand": "walton",
+      "category_id": "2",
+      "picture": "https://waltonbd.com/image/cache/catalog/Mobile/2021/primos8/id-image/S8_ID-364x364.jpg",
+      "price": "20,990",
+      "description": "The 5MP Wide Camera Sensor of the Primo S8 helps you see wider than your normal vision and helps you capture eye catchy landscape shots."
+    },
+    {
+      "name": "PRIMO S8 MINI",
+      "brand": "walton",
+      "category_id": "2",
+      "picture": "https://waltonbd.com/image/cache/catalog/Mobile/2022/s8mini/id-image/1-s8-mini-id-stone-white-364x364.jpg",
+      "price": "14,999",
+      "description": "How much RAM and Memory space do you actually need to call a phone perfect? We give you multiple memory choices with a whooping 64GB internal storage and yes, a dedicated MicroSD."
+    },
+    {
+      "name": "PRIMO GH11",
+      "brand": "walton",
+      "category_id": "2",
+      "picture": "https://waltonbd.com/image/cache/catalog/Mobile/2022/gh11/id-image/GH11_ID1-364x364.jpg",
+      "price": "8,790",
+      "description": "Android 12 is featuring dynamic color capabilities that can transform your experience based on your wallpaper and responsive."
+    },
+    {
+      "name": "PRIMO RX8 MINI",
+      "brand": "walton",
+      "category_id": "2",
+      "picture": "https://waltonbd.com/image/cache/catalog/Mobile/2021/RX8%20mini/RX8-mini_ID-364x364.jpg",
+      "price": "12,999",
+      "description": "Continuing the trend of its predecessor, the Primo RX8 mini has a slim 8.4mm frame with a glossy glass back which gives it a different aesthetic in hand feel. It comes in a glossy black color that all of you will love."
+    },
+    {
+      "name": "Oppo A17",
+      "brand": "oppo",
+      "category_id": "3",
+      "picture": "https://www.mobiledokan.com/wp-content/uploads/2022/11/Oppo-A17.jpg",
+      "price": "15,990 ",
+      "description": "Oppo A17 comes with 6.56 inches HD+ screen. It has a Full-View waterdrop notch design. The back camera is of dual 50+2 MP with LED flash, PDAF, depth sensor, HDR etc. and Full HD video recording."
+    },
+    {
+      "name": "Oppo A16e",
+      "brand": "oppo",
+      "category_id": "3",
+      "picture": "https://www.mobiledokan.com/wp-content/uploads/2022/04/Oppo-A16e.jpg",
+      "price": "13,990 ",
+      "description": "Oppo A16e comes with 6.52 inches HD+ screen. It has a Full-View waterdrop notch design. The back camera is of single 13 MP with LED flash, PDAF, f/2.2 aperture etc. and Full HD video recording."
+    },
+    {
+      "name": "Oppo A33",
+      "brand": "oppo",
+      "category_id": "3",
+      "picture": "https://www.mobiledokan.com/wp-content/uploads/2020/11/Oppo-A33.jpg",
+      "price": "13,990",
+      "description": "Oppo A33 comes with 6.5 inches HD+ screen. It has a Full-View left punch-hole design. The front side is protected by a 3rd gen. Gorilla Glass. The back camera is of triple 13+2+2 MP with LED flash, PDAF, depth."
+    },
+    {
+      "name": "Oppo F21s Pro",
+      "brand": "oppo",
+      "category_id": "3",
+      "picture": "https://www.mobiledokan.com/wp-content/uploads/2022/10/Oppo-F21s-Pro.jpg",
+      "price": "29,990",
+      "description": "Oppo F21s Pro comes with 6.43 inches Full HD+ AMOLED screen. It has a left punch-hole front camera design. The back camera is of triple 64+2+2 MP with PDAF, LED flash, f/1.7 aperture, microscope, depth."
+    },
+    {
+      "name": "Oppo A95",
+      "brand": "oppo",
+      "category_id": "3",
+      "picture": "https://www.mobiledokan.com/wp-content/uploads/2021/11/Oppo-A95-4G-image.jpg",
+      "price": "27,990",
+      "description": "Oppo A95 comes with 6.43 inches Full HD+ AMOLED screen. It has a left punch-hole front camera design. The back camera is of triple 48+2+2 MP with depth sensor, dedicated macro lens, PDAF, LED flash etc."
+    },
+    {
+      "name": "Oppo R17 Pro",
+      "brand": "oppo",
+      "category_id": "3",
+      "picture": "https://www.mobiledokan.com/wp-content/uploads/2020/04/Oppo-R17-Pro-new.jpg",
+      "price": "69,990",
+      "description": "Oppo R17 Pro is a high-mid range smartphone priced 69,990 Tk. in Bangladesh upon its release. After analyzing its specs, we concluded that the closest competitor of it in Bangladesh would be OnePlus 6T."
+    }
+  ]
