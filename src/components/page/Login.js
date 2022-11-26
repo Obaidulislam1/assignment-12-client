@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import image from '../../image/login.jpg'
 
 const Login = () => {
@@ -32,6 +33,7 @@ const Login = () => {
                         <div className="form-control mt-6">
                             <input className="btn btn-primary" type="submit" value="Login" />
                         </div>
+                        <p className='text-center'>New to side? <Link className='text-orange-500 text-bold' to='/signup'>Sign Up</Link></p>
                     </form>
                 </div>
             </div>
