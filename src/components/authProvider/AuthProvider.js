@@ -1,4 +1,4 @@
-import React, { Children, createContext, useState } from 'react';
+import React, { createContext, useState } from 'react';
 import app from '../../firebase/firebase.config';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 

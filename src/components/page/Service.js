@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Modal from './Modal';
 import ServiceCard from './ServiceCard';
 
 const Service = () => {
@@ -13,6 +14,7 @@ const Service = () => {
             service={service}
             ></ServiceCard>)
            }
+           <Modal></Modal>
         </div>
     );
 };
