@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Modal = ({ booking }) => {
+const Modal = ({ booking,setBooking }) => {
     const { name, resale, location, date
 
     } = booking;
@@ -23,6 +23,7 @@ const handleBuy = event =>{
         number
     }
     console.log(buyDetails);
+    setBooking(null)
 
 }
 

@@ -20,6 +20,7 @@ const Service = () => {
             booking &&
              <Modal
              booking={booking}
+             setBooking={setBooking}
              ></Modal>
           }
         </div>
