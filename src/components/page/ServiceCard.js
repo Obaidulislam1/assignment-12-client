@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ServiceCard = ({ service }) => {
+const ServiceCard = ({ service,setBooking }) => {
     const { picture, name, description, price, location, resale, use,date
     } = service;
     return (
@@ -15,7 +15,10 @@ const ServiceCard = ({ service }) => {
                 <p><span className='font-bold'>date:</span> {date}</p>
                 <p>{description}</p>
                 <div className="card-actions justify-end">
-                    <label htmlFor="BuyNow-Modal" className="btn btn-primary">Buy Now</label>
+                    <label htmlFor="BuyNow-Modal"
+                    onClick={() => setBooking(service)}
+                     className="btn btn-primary"
+                     >Buy Now</label>
                 </div>
             </div>
         </div>
