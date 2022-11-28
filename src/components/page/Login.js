@@ -1,12 +1,17 @@
 import { useForm } from 'react-hook-form';
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../authProvider/AuthProvider';
 
 const Login = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
-    const { SignIn,googleSignIn } = useContext(AuthContext);
+    const { SignIn, googleSignIn } = useContext(AuthContext);
     const [loginerror, setLoginerror] = useState('');
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const from = location.state?.from?.pathname || '/';
+
     const handleLogin = data => {
         setLoginerror('');
         console.log(data)
@@ -15,18 +20,19 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                navigate(from, { replace: true })
             })
             .catch(err => {
                 setLoginerror(err.message)
             })
     }
-    const handleGoogle = () =>{
+    const handleGoogle = () => {
         googleSignIn()
-        .then(result =>{
-            const user = result.user;
-            console.log(user);
-        })
-        .catch(err => console.error(err))
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(err => console.error(err))
     }
     return (
         <div className='flex justify-center items-center'>
