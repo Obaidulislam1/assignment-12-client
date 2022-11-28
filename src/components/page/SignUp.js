@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import image from '../../image/login.jpg'
+import { AuthContext } from '../authProvider/AuthProvider';
 
 const SignUp = () => {
    
 const {register,handleSubmit,formState:{errors}} = useForm()
+const {createUser} = useContext(AuthContext)
 
 const handleSignUp = (data) =>{
 console.log(data)
-console.log(errors);
+createUser(data.email, data.password)
+.then(result =>{
+    const user = result.user;
+    console.log(user)
+})
+.catch(err => console.log(err));
 }
 
     return (
@@ -47,7 +54,8 @@ console.log(errors);
                         <input name='password' type="password"
                         {...register("password",{
                             required: 'password is required',
-                            minLength: {value: 6, message: 'password must be 6 characters long'}
+                            minLength: {value: 6, message: 'password must be 6 characters long'},
+                            pattern: {value: /^(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])/, message: 'password must be strong'}
                         })} placeholder="password" className="input input-bordered" />
                     </div>
                     {errors.password && <p className='text-red-500'>{errors.password.message}</p>}
