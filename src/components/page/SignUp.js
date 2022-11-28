@@ -7,7 +7,7 @@ import { AuthContext } from '../authProvider/AuthProvider';
 const SignUp = () => {
    
 const {register,handleSubmit,formState:{errors}} = useForm()
-const {createUser} = useContext(AuthContext)
+const {createUser,updateUser} = useContext(AuthContext)
 
 const handleSignUp = (data) =>{
 console.log(data)
@@ -15,6 +15,12 @@ createUser(data.email, data.password)
 .then(result =>{
     const user = result.user;
     console.log(user)
+    const userInfo = {
+        displayName: data.name
+    }
+    updateUser(userInfo) 
+    .then(() =>{})
+    .catch( err => console.error(err));
 })
 .catch(err => console.log(err));
 }
