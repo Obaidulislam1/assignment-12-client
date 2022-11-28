@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import toast from 'react-hot-toast';
+import { AuthContext } from '../authProvider/AuthProvider';
 
 const Modal = ({ booking,setBooking }) => {
-    const { name, resale, location, date
-
-    } = booking;
+    const { name, resale, location, date} = booking;
+    const {user} = useContext(AuthContext);
     console.log(booking)
 
 const handleBuy = event =>{
@@ -23,8 +24,23 @@ const handleBuy = event =>{
         number
     }
     console.log(buyDetails);
-    setBooking(null)
-
+    
+    fetch('http://localhost:5000/orders', {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(buyDetails)
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log(data);
+        if(data.acknowledged){
+            setBooking(null)
+            toast.success('Order Confirm')
+        }
+    })
+   
 }
 
     return (
@@ -41,15 +57,16 @@ const handleBuy = event =>{
                     <form onSubmit={handleBuy}>
                         <span className='flex items-center mt-2'>
                             <p className='text-lg mr-5'>Name</p>
-                            <input type="text" name='name' placeholder="Type here" className="input input-bordered input-sm w-full max-w-xs" /></span>
+                            <input type="text" name='name'
+                             defaultValue={user?.displayName}  placeholder="Type here" className="input input-bordered input-sm w-full max-w-xs" readOnly/></span>
                         <span className='flex items-center mt-2'>
                             <p className='text-lg mr-5'>Email  </p>
-                            <input type="email" name='email' placeholder="Type here" className="input input-bordered input-sm w-full max-w-xs" /></span>
+                            <input type="email" name='email' placeholder="Type here" defaultValue={user?.email} className="input input-bordered input-sm w-full max-w-xs" readOnly/></span>
                         <span className='flex items-center mt-2'>
                             <p className='text-lg mr-5'>Number</p>
                             <input type="text" name='number' placeholder="Type here" className="input input-bordered input-sm w-full max-w-xs" /></span>
                         <div className='flex justify-center mt-5'>
-                            <input className='btn btn-primary' type="submit" value="Submit" />
+                            <input className='btn btn-primary' type="submit" value="Submit" required/>
                         </div>
                     </form>
                 </div>

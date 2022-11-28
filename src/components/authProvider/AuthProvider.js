@@ -8,28 +8,33 @@ const auth = getAuth(app)
 const provider = new GoogleAuthProvider();
 
 const AuthProvider = ({ children }) => {
-
+   const [loading, setLoading] = useState(true);
     const [user, setUser] = useState(null);
 
     const createUser = (email, password) => {
+        setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password);
     }
     const SignIn = (email, password) => {
+        setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
     const logOut = () => {
+        setLoading(true)
         return signOut(auth);
     }
     const googleSignIn = () =>{
+        setLoading(true)
         return signInWithPopup(auth, provider)
     }
     const updateUser = (userUpdate) =>{
-        return updateProfile(user, userUpdate)
+        return updateProfile(auth.currentUser, userUpdate)
     }
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
             console.log(currentUser);
             setUser(currentUser)
+            setLoading(false)
         })
         return () => unSubscribe();
     }, [])
@@ -40,7 +45,8 @@ const AuthProvider = ({ children }) => {
         user,
         logOut,
         googleSignIn,
-        updateUser
+        updateUser,
+        loading
     }
     return (
         <AuthContext.Provider value={authInfo}>
