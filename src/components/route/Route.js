@@ -11,29 +11,29 @@ export const router = createBrowserRouter([
   {
     path: '/',
     element: <Main></Main>,
-    children:[
-        {
-            path: '/',
-            element: <Home></Home>
-        },
-        {
-            path: '/login',
-            element: <Login></Login>
-        },
-        {
-            path: '/signup',
-            element: <SignUp></SignUp>
-        },
-        {
-          path: '/service/:category_id',
-          element: <Service></Service>,
-          loader: ({params}) => fetch(`http://localhost:5000/service/${params.category_id}`)
-
-        }
+    children: [
+      {
+        path: '/',
+        element: <Home></Home>
+      },
+      {
+        path: '/login',
+        element: <Login></Login>
+      },
+      {
+        path: '/signup',
+        element: <SignUp></SignUp>
+      },
+      {
+        path: '/service/:category_id',
+        element: <Service></Service>,
+        loader: ({ params }) => fetch(`http://localhost:5000/service/${params.category_id}`)
+      },
+      {
+        path: '/dashboard',
+        element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>
+      }
     ]
   },
-  {
-   path: '/dashboard' ,
-   element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>
-  }
+
 ]);
