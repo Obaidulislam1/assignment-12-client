@@ -5,10 +5,11 @@ import image from '../../image/login.jpg'
 
 const SignUp = () => {
    
-const {register,handleSubmit} = useForm()
+const {register,handleSubmit,formState:{errors}} = useForm()
 
 const handleSignUp = (data) =>{
 console.log(data)
+console.log(errors);
 }
 
     return (
@@ -24,22 +25,32 @@ console.log(data)
                             <span className="label-text">Your name</span>
                         </label>
                         <input name='name' type="text"
-                        {...register("name")} placeholder="name" className="input input-bordered"/>
+                        {...register("name",{
+                            required: 'name is required'
+                        })} placeholder="name" className="input input-bordered"/>
+                        {errors.name && <p className='text-red-500'>{errors.name.message}</p>}
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>
                         <input name='email' type="email" 
-                        {...register("email")} placeholder="email" className="input input-bordered" />
+                        {...register("email", {
+                            required: true
+                        })} placeholder="email" className="input input-bordered" />
+                        {errors.email && <p className='text-red-500'>{errors.email.message}</p>}
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Password</span>
                         </label>
                         <input name='password' type="password"
-                        {...register("password")} placeholder="password" className="input input-bordered" />
+                        {...register("password",{
+                            required: 'password is required',
+                            minLength: {value: 6, message: 'password must be 6 characters long'}
+                        })} placeholder="password" className="input input-bordered" />
                     </div>
+                    {errors.password && <p className='text-red-500'>{errors.password.message}</p>}
                     <div className="form-control mt-6">
                         <input className="btn btn-primary" type="submit" value="Sign up"/>
                     </div>
