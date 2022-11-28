@@ -1,5 +1,6 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import image from '../../image/login.jpg'
 import { AuthContext } from '../authProvider/AuthProvider';
@@ -8,21 +9,27 @@ const SignUp = () => {
    
 const {register,handleSubmit,formState:{errors}} = useForm()
 const {createUser,updateUser} = useContext(AuthContext)
+const [signuperror, setSignuperror] = useState('')
 
 const handleSignUp = (data) =>{
 console.log(data)
+setSignuperror('')
 createUser(data.email, data.password)
 .then(result =>{
     const user = result.user;
+    toast('user Created successfully.');
     console.log(user)
     const userInfo = {
         displayName: data.name
     }
     updateUser(userInfo) 
     .then(() =>{})
-    .catch( err => console.error(err));
+    .catch( err =>console.error(err));
 })
-.catch(err => console.log(err));
+.catch(err => {
+    console.log(err)
+    setSignuperror(err)
+});
 }
 
     return (
@@ -65,6 +72,7 @@ createUser(data.email, data.password)
                         })} placeholder="password" className="input input-bordered" />
                     </div>
                     {errors.password && <p className='text-red-500'>{errors.password.message}</p>}
+                    {signuperror && <p className='text-red-500'>{signuperror}</p>}
                     <div className="form-control mt-6">
                         <input className="btn btn-primary" type="submit" value="Sign up"/>
                     </div>
