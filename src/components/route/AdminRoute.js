@@ -5,9 +5,9 @@ import useAdmin from '../page/UseAdmin';
 
 const AdminRoute = ({children}) => {
 const {user,loading} = useContext(AuthContext);
-const [isAdmin] = useAdmin(user?.email)
+const [isAdmin,isLoading] = useAdmin(user?.email)
 const location = useLocation();
-if(loading){
+if(loading || isLoading){
    return <div className='flex justify-center items-center mt-52'><progress className="progress w-56"></progress></div>
 }
 if(user && isAdmin){

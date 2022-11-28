@@ -2,18 +2,20 @@ import { useEffect, useState } from "react"
 
 const useAdmin = email =>{
     const [isAdmin,setIsAdmin] = useState(false);
+    const [isLoading, setIsLoading] = useState(true)
     useEffect( () => {
        if(email){
         fetch(`http://localhost:5000/allUser/admin/${email}`)
         .then(res => res.json())
         .then(data => {
             console.log(data);
-           setIsAdmin(data.isAdmin) 
+           setIsAdmin(data.isAdmin);
+           setIsLoading(false);
         })
        }
 
     },[email])
-    return [isAdmin]
+    return [isAdmin,isLoading]
 }
 
 export default useAdmin;
