@@ -12,6 +12,7 @@ const NavbarItem = () => {
     return (
         <>
             <li><Link to='/'>Home</Link></li>
+            <li><Link to='/allUser'>All User</Link></li>
             {
                 user?.uid ? 
                <>

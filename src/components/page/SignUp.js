@@ -35,6 +35,21 @@ createUser(data.email, data.password)
 });
 }
 
+const alluser = (name, email) =>{
+    const user = {name,email};
+    fetch('http://localhost:5000/allUser', {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(user)
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log(data);
+    })
+}
+
     return (
         <div className="hero w-full">
         <div className="hero-content grid md:grid-cols-2 flex-col lg:flex-row">
