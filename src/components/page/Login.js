@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import image from '../../image/login.jpg'
 
 const Login = () => {
-    const { register, handleSubmit } = useForm()
+    const { register, formState: {errors}, handleSubmit } = useForm();
     const handleLogin = data =>{
         console.log(data)
     }
@@ -17,13 +16,20 @@ const Login = () => {
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>
-                        <input className="input input-bordered w-full max-w-xs" type="email" {...register("email")} />
+                        <input className="input input-bordered w-full max-w-xs" type="email"
+                         {...register("email", {required: "Email is required"})}
+                          />
+                          {errors.email && <p className='text-red-500'>{errors.email?.message}</p>}
                     </div>
                     <div className="form-control w-full max-w-xs">
                         <label className="label">
                             <span className="label-text">password</span>
                         </label>
-                        <input className="input input-bordered w-full max-w-xs" type="password" {...register("password")} />
+                        <input className="input input-bordered w-full max-w-xs" type="password" 
+                        {...register("password", {
+                            required: "password is required"
+                        })} />
+                        {errors.password && <p className='text-red-500'>{errors.password?.message}</p>}
                         <label className="label">
                             <span className="label-text">forget password?</span>
                         </label>
