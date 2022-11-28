@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "../Home/Home";
 import Main from "../layOut/Main";
 import AllUser from "../page/AllUser";
+import Blog from "../page/Blog";
 import Dashboard from "../page/Dashboard";
 import Login from "../page/Login";
 import Service from "../page/Service";
@@ -38,6 +39,10 @@ export const router = createBrowserRouter([
       {
         path: '/allUser',
         element: <AdminRoute><AllUser></AllUser></AdminRoute>
+      },
+      {
+        path: '/blog',
+        element: <Blog></Blog>
       }
 
     ]

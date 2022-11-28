@@ -14,6 +14,7 @@ const NavbarItem = () => {
     return (
         <>
             <li><Link to='/'>Home</Link></li>
+            <li><Link to='/blog'>Blog</Link></li>
             {
                 isAdmin && <>
                     <li><Link to='/allUser'>All User</Link></li>
